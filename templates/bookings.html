@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Your Bookings</title>
+</head>
+<body>
+    <h1>Your Bookings</h1>
+    <ul>
+    {% for booking in bookings %}
+        <li>{{ booking[0] }} - Seat: {{ booking[1] }} - Date: {{ booking[2] }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('book_ticket') }}">Book Another Ticket</a><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

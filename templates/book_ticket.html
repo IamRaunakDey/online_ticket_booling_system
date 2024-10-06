@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Book Ticket</title>
+</head>
+<body>
+    <h1>Book a Ticket</h1>
+    <form method="POST">
+        Event Name: <input type="text" name="event_name"><br>
+        Seat Number: <input type="text" name="seat_number"><br>
+        <input type="submit" value="Book Ticket">
+    </form>
+    <a href="{{ url_for('bookings') }}">View Bookings</a><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
